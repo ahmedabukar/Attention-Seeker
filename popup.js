@@ -1,4 +1,18 @@
+// get user input from form
 let changeColor = document.getElementById('changeColor');
+var name = document.getElementById('email');
+var email = document.getElementById('name');
+var time = document.getElementById('time');
+var websites = document.getElementById('websites');
+
+// print stuff
+console.log(name);
+console.log(email);
+console.log(time);
+console.log(websites);
+
+// split websites into individual strings and store in array
+var websitesList = websites.split(",");
 
   chrome.storage.sync.get('color', function(data) {
     changeColor.style.backgroundColor = data.color;
