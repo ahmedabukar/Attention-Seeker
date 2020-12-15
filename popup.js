@@ -1,33 +1,43 @@
-// get user input from form
+
 let changeColor = document.getElementById('changeColor');
-var name = document.getElementById('email');
-var email = document.getElementById('name');
-var time = document.getElementById('time');
-var websites = document.getElementById('websites');
 
-// print stuff
-console.log(name);
-console.log(email);
-console.log(time);
-console.log(websites);
 
+// test for events
+document.getElementById("userData").addEventListener("submit", myFunction);
+
+function myFunction() {
+  alert("The form was submitted");
+  console.log("This is the start");
+  // get user input from form
+  var name = document.getElementById('email');
+  var email = document.getElementById('name');
+  var time = document.getElementById('time');
+  var websites = document.getElementById('websites');
+  
+  // print stuff
+  console.log(name);
+  console.log(email);
+  console.log(time);
+  console.log(websites);
+  console.log("The input ends here");
+}
 // split websites into individual strings and store in array
-var websitesList = websites.split(",");
+/*var websitesList = websites.split(",");
 
   chrome.storage.sync.get('color', function(data) {
     changeColor.style.backgroundColor = data.color;
     changeColor.setAttribute('value', data.color);
 
   });
-
-changeColor.onclick = function(element) {
+*/
+/*changeColor.onclick = function(element) {
   let color = element.target.value;
   chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
     chrome.tabs.executeScript(
         tabs[0].id,
         {code: 'document.body.style.backgroundColor = "' + color + '";'});
   });
-};
+};*/
 
 //BLOCK WORDS
 findString = function findText(text) {
@@ -53,7 +63,7 @@ findURL = function changeURL(text){
       document.documentElement.innerHTML = '';
       document.documentElement.innerHTML = 'Domain is blocked';
       document.documentElement.scrollTop = 0;
-    }
+    };
   } 
 }
 

@@ -2,7 +2,7 @@
     "name": "Getting Started Example",
     "version": "1.0",
     "description": "Build an Extension!",
-    "permissions": ["activeTab", "declarativeContent", "storage"],
+    "permissions": ["activeTab", "storage"],
     "background": {
       "scripts": ["background.js"],
       "persistent": false
@@ -23,6 +23,12 @@
       "48": "images/get_started48.png",
       "128": "images/get_started128.png"
     },
+
+    "content_scripts": [{
+      "matches": ["http://*.example.com/*"],
+      "js": ["popup.js"],
+      "run_at": "document_start"
+  }],
     "manifest_version": 2
 
   }
