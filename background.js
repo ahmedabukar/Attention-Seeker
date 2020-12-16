@@ -3,14 +3,14 @@
 
 
 // Uncomment to use
-window.onload = function(){
+// window.onload = function(){
 
-  var allowed = ["bing.com/", "nbclearn.com/", "google.com/"];
+//   var allowed = ["bing.com/", "google.com/"];
 
-  chrome.webRequest.onBeforeRequest.addListener(function(details) {
-      var isForbidden = allowed.every(function(url) {
-          return details.url.indexOf(url) == -1;
-      });
-      return {cancel: isForbidden}
-  }, {urls: ["<all_urls>"]}, ["blocking"]);
-};
+//   chrome.webRequest.onBeforeRequest.addListener(function(details) {
+//       var isForbidden = allowed.every(function(url) {
+//           return details.url.indexOf(url) == -1;
+//       });
+//       return {cancel: isForbidden}
+//   }, {urls: ["<all_urls>"]}, ["blocking"]);
+// }; 
