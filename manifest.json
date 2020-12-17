@@ -1,13 +1,12 @@
 {
-    "name": "Getting Started Example",
+    "name": "Attention Seeker",
     "version": "1.0",
-    "description": "Build an Extension!",
+    "description": "Block Sites!",
     "permissions": ["activeTab", "storage", "webRequest", "webRequestBlocking","<all_urls>"],
     "background": {
       "scripts": ["background.js"],
       "persistent": true
     },
-    "options_page": "options.html",
     "page_action": {
       "default_popup": "popup.html",
       "default_icon": {
